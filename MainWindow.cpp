@@ -4,6 +4,8 @@
 #include <QStringList>
 #include <QListView>
 #include <QGridLayout>
+#include <QGroupBox>
+#include <QLabel>
 
 MainWindow::MainWindow(void):
     m_ListEntity(new QStringListModel()),
@@ -24,6 +26,20 @@ MainWindow::MainWindow(void):
             fileList->setViewMode(QListView::ViewMode::IconMode);
             fileList->setRootIndex(m_ListFile->index(QDir::currentPath()));
             mainLayout->addWidget(fileList, 0, 1, 2, 1);
+
+            QGroupBox *infogroupbox = new QGroupBox(tr("Informations"));
+                QVBoxLayout *info = new QVBoxLayout;
+                {
+
+                    QLabel *resteAPayer = new QLabel(tr("Reste à payer: "));
+                    info->addWidget(resteAPayer);
+
+                    QLabel *resteAManger = new QLabel(tr("Reste à manger: "));
+                    info->addWidget(resteAManger);
+
+                }
+                infogroupbox->setLayout(info);
+            mainLayout->addWidget(infogroupbox, 1, 0);
         }
         window->setLayout(mainLayout);
     setCentralWidget(window);
