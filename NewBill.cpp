@@ -65,7 +65,7 @@ NewBill::NewBill(const QString &filename)
     /*** Action behaviour and slot connection ***/
     {
         /** Upload **/
-        QIcon uploadIcon = QIcon("upload_icon.png");
+        QIcon uploadIcon = QIcon("assets/upload_icon.png");
         QAction *uploadFile = m_Input.file->addAction(uploadIcon, QLineEdit::ActionPosition::TrailingPosition);
         connect(uploadFile, &QAction::triggered, this, &NewBill::on_uploadingFile);
 
