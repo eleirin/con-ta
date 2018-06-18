@@ -44,21 +44,21 @@ NewBill::NewBill(const QString &filename)
                 inputLayout->addRow(tr("&Catégorie:"), m_Input.category);
 
                 m_Input.value = new QDoubleSpinBox();
-                m_Input.value->setRange(0, 10000000000); 
+                m_Input.value->setRange(0, 10000000000);
                 inputLayout->addRow(tr("&Montant:"), m_Input.value);
 
                 // TODO: Put entity as a special class
                 m_Input.entity = new QLineEdit;
-                inputLayout->addRow(tr("&Nom:"), m_Input.entity); 
+                inputLayout->addRow(tr("&Nom:"), m_Input.entity);
             }
             buttonLayout->addLayout(inputLayout);
 
             buttonLayout->addStretch();
 
-            buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel); 
+            buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
             buttonLayout->addWidget(buttonBox);
         }
-        mainLayout->addLayout(buttonLayout); 
+        mainLayout->addLayout(buttonLayout);
     }
     setLayout(mainLayout);
 
