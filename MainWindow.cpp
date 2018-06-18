@@ -23,8 +23,7 @@ MainWindow::MainWindow(void):
 
             QListView *fileList = new QListView;
             fileList->setModel(m_ListFile);
-            fileList->setViewMode(QListView::ViewMode::IconMode);
-            fileList->setRootIndex(m_ListFile->index(QDir::currentPath()));
+            fileList->setRootIndex(m_ListFile->index("./assets"));
             mainLayout->addWidget(fileList, 0, 1, 2, 1);
 
             QGroupBox *infogroupbox = new QGroupBox(tr("Informations"));
