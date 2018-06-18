@@ -4,5 +4,7 @@
 
 class MainWindow: public QMainWindow
 {
+public:
+    MainWindow(void);
 };
 #endif //HEAD_MAINWINDOW
