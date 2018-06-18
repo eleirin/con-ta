@@ -1,0 +1,28 @@
+Logiciel 
+
+
+Trésorier ouvre son ordi 
+Logiciel => Sélectionne la photo d'une facture (Nouvelle facture) => Renseigne la date, le montant, la personne qui a payé, la catégorie
+Navigateur de fichier (date, type)
+Affiche la facture
+Selectionne une photo qui existe déjà
+Sélectionne la liste des personnes, consulte la liste des dépenses avancés (sous categories par date), total, sous-total
+À partir du menu précedent: Indiquer un remboursement, toutes les factures sont remboursés dans l'ordre + solde
+Sélectionner utilisateur: liste de toutes les factures avec couleurs pour payés/impayés
+Exportation d'utilisateurs
+Utilisateurs soldés et pas remboursés
+Anti-remboursement
+Field invalide
+Exportation: Sommes remboursement anti-remboursement
+
+Hors ligne (vital)
+
+En ligne: 
+Asynchrone (vital)
+Invalider une action en ligne en ligne
+SQL
+Feature:
+Ordi
+Smartphone (pas vital)
+Gallerie
+Catégorie
