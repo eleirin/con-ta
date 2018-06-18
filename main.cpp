@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
     /*** Setting sql connection ***/
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("finance");
+    db.setDatabaseName("finance.db");
     db.open();
 
     /*** Main window display ***/
