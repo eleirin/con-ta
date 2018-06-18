@@ -17,13 +17,13 @@ MainWindow::MainWindow(void):
             entityList->setModel(m_ListEntity);
             entityList->setEditTriggers(QAbstractItemView::NoEditTriggers);
             entityList->setViewMode(QListView::ViewMode::IconMode);
-            mainLayout->addWidget(entityList);
+            mainLayout->addWidget(entityList, 0, 0);
 
             QListView *fileList = new QListView;
             fileList->setModel(m_ListFile);
             fileList->setViewMode(QListView::ViewMode::IconMode);
             fileList->setRootIndex(m_ListFile->index(QDir::currentPath()));
-            mainLayout->addWidget(fileList);
+            mainLayout->addWidget(fileList, 0, 1, 2, 1);
         }
         window->setLayout(mainLayout);
     setCentralWidget(window);
