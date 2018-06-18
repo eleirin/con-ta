@@ -1,5 +1,5 @@
-#ifndef HEAD_MAINWINDOW
-#define HEAD_MAINWINDOW
+#ifndef HEAD_NEWBILL
+#define HEAD_NEWBILL
 #include <QDialog>
 class QLineEdit;
 class QDateEdit;
@@ -28,4 +28,4 @@ private:
     } m_Input;
 };
 
-#endif //HEAD_MAINWINDOW
+#endif //HEAD_NEWBILL
