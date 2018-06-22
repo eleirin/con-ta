@@ -6,8 +6,6 @@
 #include <QIcon>
 #include <QVariant>
 
-#include <iostream>
-
 //TODO: Transfer to a normal class
 namespace Database
 {

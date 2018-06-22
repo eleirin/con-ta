@@ -12,8 +12,6 @@
 #include <QMenu>
 #include <QMenuBar>
 
-#include <iostream>
-
 MainWindow::MainWindow(void):
     m_ListEntity(new QStringListModel()),
     m_ListFile(new QFileSystemModel())
