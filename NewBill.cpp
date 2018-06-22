@@ -83,7 +83,7 @@ NewBill::NewBill(const QString &filename)
     {
         m_Input.file->setText(filename);
     }
-} 
+}
 
 void NewBill::on_uploadingFile(void)
 {
