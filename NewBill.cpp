@@ -1,10 +1,12 @@
 #include "NewBill.h"
+#include "Database.h"
 #include <QLabel>
 #include <QLayout>
 #include <QVBoxLayout>
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QDateEdit>
+#include <QTime>
 #include <QDoubleSpinBox>
 #include <QIcon>
 #include <QAction>
@@ -73,8 +75,8 @@ NewBill::NewBill(const QString &filename)
         connect(m_Input.file, &QLineEdit::textChanged, image, &QLabel::setPixmap);
 
         /*** Button press ***/
-        connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-        connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+        connect(buttonBox, &QDialogButtonBox::accepted, this, &NewBill::on_addBill);
+        connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     }
 
     /*** Member initialisation **/
@@ -91,3 +93,28 @@ void NewBill::on_uploadingFile(void)
 
     m_Input.file->setText(fileOpened);
 }
+
+void NewBill::on_addBill(void)
+{
+    Database::insert_bill(m_Input);
+    accept();
+}
+
+/*** NewBill::Input ***/
+NewBill::Input::operator Database::Bill(void) const
+{
+    return
+    {
+        {
+            .date=date->date(),
+            .entity=nullptr,
+            .value = value->value(),
+            .datecreated = QDateTime::currentDateTime(),
+            .author = "me"
+        },
+        .file = file->text(),
+        .id_display = "XXXX",
+        .category = nullptr
+    };
+}
+

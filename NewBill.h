@@ -1,6 +1,10 @@
 #ifndef HEAD_NEWBILL
 #define HEAD_NEWBILL
 #include <QDialog>
+namespace Database
+{
+class Bill;
+}
 class QLineEdit;
 class QDateEdit;
 class QDoubleSpinBox;
@@ -16,10 +20,13 @@ public:
 
 private slots:
     void on_uploadingFile(void);
+    void on_addBill(void);
 
 private:
     struct Input
     {
+        operator Database::Bill(void) const;
+
         QLineEdit *file;
         QDateEdit *date;
         QLineEdit *category;
