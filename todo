@@ -3,10 +3,6 @@ Fenetres des entités
 Fenetre des catégories (combobox)
 Transformer combobox en view
 
-=== (3)
-Settings
-Menu bar
-
 ===
 Changer pour que tout les widgets soit enfants de this
 

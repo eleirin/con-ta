@@ -8,6 +8,9 @@
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QLabel>
+#include <QAction>
+#include <QMenu>
+#include <QMenuBar>
 
 #include <iostream>
 
@@ -16,6 +19,22 @@ MainWindow::MainWindow(void):
     m_ListFile(new QFileSystemModel())
 {
     QListView *fileList;
+
+    /*** Menu bar ***/
+    QMenu *new_menu = menuBar()->addMenu("&Nouvelle...");
+    {
+        m_Actions.newBill = new QAction("&Facture", this);
+        new_menu->addAction(m_Actions.newBill);
+
+        m_Actions.newEntity = new QAction("&Entitée", this);
+        new_menu->addAction(m_Actions.newEntity);
+
+        m_Actions.newCategory = new QAction("&Catégorie", this);
+        new_menu->addAction(m_Actions.newCategory);
+
+        m_Actions.settings = new QAction("&Préférences", this);
+        menuBar()->addAction(m_Actions.settings);
+    }
 
     /*** Main Layout ***/
     QWidget *window = new QWidget;
