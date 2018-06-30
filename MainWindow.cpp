@@ -19,18 +19,18 @@ MainWindow::MainWindow(void):
     QListView *fileList;
 
     /*** Menu bar ***/
-    QMenu *new_menu = menuBar()->addMenu("&Nouvelle...");
+    QMenu *new_menu = menuBar()->addMenu(tr("&Nouvelle..."));
     {
-        m_Actions.newBill = new QAction("&Facture", this);
+        m_Actions.newBill = new QAction(tr("&Facture"), this);
         new_menu->addAction(m_Actions.newBill);
 
-        m_Actions.newEntity = new QAction("&Entitée", this);
+        m_Actions.newEntity = new QAction(tr("&Entitée"), this);
         new_menu->addAction(m_Actions.newEntity);
 
-        m_Actions.newCategory = new QAction("&Catégorie", this);
+        m_Actions.newCategory = new QAction(tr("&Catégorie"), this);
         new_menu->addAction(m_Actions.newCategory);
 
-        m_Actions.settings = new QAction("&Préférences", this);
+        m_Actions.settings = new QAction(tr("&Préférences"), this);
         menuBar()->addAction(m_Actions.settings);
     }
 
