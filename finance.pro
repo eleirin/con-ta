@@ -4,7 +4,7 @@ DISTFILES=facture.png
 OBJECTS_DIR=obj/
 MOC_DIR=obj/
 
-CONFIG  += qt debug x11
+CONFIG  += qt debug
 QMAKE_CXXFLAGS+=-std=c++17  -fdiagnostics-color=always
 QT += widgets core sql
 INCLUDEPATH += .
