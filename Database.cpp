@@ -35,8 +35,8 @@ int insert_event(const Event &event)
 {
     return insert_table(
     "Event",
-    {"Date",    "Entity", "Value",     "Created_ts",      "Author"},
-    event.date, 0,        event.value, event.datecreated, event.author
+    {"Date",    "Entity", "Value",     "Created_ts",      "Author", "Notes"},
+    event.date, 0,        event.value, event.datecreated, event.author, event.notes
     );
 }
 

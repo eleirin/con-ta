@@ -9,6 +9,8 @@ class QLineEdit;
 class QDateEdit;
 class QDoubleSpinBox;
 class QLabel;
+class QComboBox;
+class QTextEdit;
 
 class NewBill: public QDialog
 {
@@ -29,9 +31,10 @@ private:
 
         QLineEdit *file;
         QDateEdit *date;
-        QLineEdit *category;
+        QComboBox *category;
+        QComboBox *entity;
         QDoubleSpinBox *value;
-        QLineEdit *entity;
+        QTextEdit *notes;
     } m_Input;
 };
 

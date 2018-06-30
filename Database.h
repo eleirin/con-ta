@@ -14,7 +14,9 @@ typedef QString Author;
 struct Entity
 {
     int id;
+    QString adress;
     QString name;
+    QString notes;
 };
 
 struct Category
@@ -32,6 +34,7 @@ struct Event
     double value;
     QDateTime datecreated;
     Author author;
+    QString notes;
 };
 
 struct Bill: Event
